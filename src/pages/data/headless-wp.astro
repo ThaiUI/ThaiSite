@@ -22,7 +22,7 @@ const description = 'ตัวอย่างการนำบทความ�
       <a href='https://github.com/SeedWebs/root' target='_blank'>Root</a>
     </strong>
      จะมี Custom Endpoints ที่เรียกข้อมูลจาก WordPress ที่อยู่ที่
-    <code>
+    <code class="font-monospace">
       <a href='https://i.thaiui.com/wp-json/root/v1/dessert' target='_blank'>
         https://i.thaiui.com/wp-json/root/v1/dessert
       </a>
@@ -35,7 +35,7 @@ const description = 'ตัวอย่างการนำบทความ�
   <div class='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px] mb-[30px] before:hidden after:hidden'>
     {
       posts.map((post) => (
-        <a class='card bg-th-bg-1 rounded-th-rounded-2 shadow-th-shadow-1 overflow-hidden border-[6px] border-solid border-th-bg-1 duration-300 ease-in-out text-th-text-1 hover:cursor-pointer hover:scale-[1.06] hover:shadow-th-shadow-2 hover:border-[10px] hover:border-solid hover:border-th-bg-1 hover:text-th-text-1' href={`/dessert/${post.slug}`}>
+        <a class='card bg-th-bg-1 dark:bg-th-bg-1-dark rounded-th-rounded-2 shadow-th-shadow-1 overflow-hidden border-[6px] border-solid border-th-bg-1 dark:border-th-bg-1-dark duration-300 ease-in-out text-th-text-1 dark:text-th-text-1-dark hover:cursor-pointer hover:scale-[1.06] hover:shadow-th-shadow-2 hover:border-[10px] hover:border-solid hover:border-th-bg-1 dark:hover:border-th-bg-1-dark hover:text-th-text-1 dark:hover:text-th-text-1-dark' href={`/dessert/${post.slug}`}>
           <img src={post.thumb} alt={post.title} />
           <h2 class='title text-[1.5em] mt-4 mb-2 mx-4'>{post.title}</h2>
           <div class='excerpt text-[0.9375em] mt-0 mx-4 mb-4 text-ellipsis line-clamp-3' set:html={post.content} />

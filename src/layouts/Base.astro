@@ -6,7 +6,7 @@ import '../styles/global.scss';
 const { title, description, bodyclass = '', cover = '/cover.png' } = Astro.props;
 ---
 
-<html lang='th'>
+<html lang='th' class='font-th-body overflow-x-hidden w-full'>
   <head>
     <meta charset='utf-8' />
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
@@ -16,7 +16,7 @@ const { title, description, bodyclass = '', cover = '/cover.png' } = Astro.props
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body class={'size-m:text-[22px] size-l:text-[32px]' + (bodyclass ? ` ${bodyclass}` : '')}>
+  <body class={'bg-th-bg-2 dark:bg-th-bg-2-dark relative flex flex-col size-m:text-[22px] size-l:text-[32px] text-th-text-1 dark:text-th-text-1-dark' + (bodyclass ? ` ${bodyclass}` : '')}>
     <a class='skip-link _sr' href='#content'>Skip to content - ข้ามไปที่เนื้อหา</a>
     <Header />
     <slot />

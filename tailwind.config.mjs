@@ -6,28 +6,48 @@ export default {
 			fontFamily: {
 				'th-body': '"Noto Sans Thai", "Noto Sans", sans-serif',
 				'th-heading': '"Noto Sans Thai", "Noto Sans", sans-serif',
+				'monospace': 'monospace',
 			},
 			colors: {
 				'th-color-1': '#0c4da2',
+				'th-color-1-dark': '#0c4da2',
 				'th-color-2': '#3476ae',
+				'th-color-2-dark': '#3476ae',
 				'th-color-noti': '#cb1515',
+				'th-color-noti-dark': '#cb1515',
 				'th-text-1': '#333',
+				'th-text-1-dark': '#e4e6eb',
 				'th-text-2': '#71767f',
+				'th-text-2-dark': '#b0b3b8',
 				'th-text-3': '#14314f',
+				'th-text-3-dark': '#fff',
 				'th-text-4': '#222',
+				'th-text-4-dark': '#fff',
 				'th-bg-1': '#fff',
+				'th-bg-1-dark': '#242426',
 				'th-bg-2': '#f5f5f7',
+				'th-bg-2-dark': '#1c1e21',
 				'th-bg-dark': '#161d44',
+				'th-bg-dark-dark': '#000',
 				'th-border-1': '#d2d2d7',
+				'th-border-1-dark': '#444',
 				'th-border-2': '#e2e2e7',
+				'th-border-2-dark': '#333',
 				'th-head-text': '#333',
+				'th-head-text-dark': '#fff',
 				'th-head-bg': '#fff',
+				'th-head-bg-dark': '#242426',
 				'th-nav-text': '#fff',
 				'th-nav-bg': '#0c4da2',
+				'th-nav-bg-dark': '#313131',
 				'th-foot-text': '#ffffffcc',
 				'th-foot-bg': '#161d44',
+				'th-foot-bg-dark': '#000',
 				'th-link-1': '#0c4da2',
+				'th-link-1-dark': '#fff',
 				'th-link-2': '#3476ae',
+				'th-link-2-dark': '#3476ae',
+				'th-nav-overlay-dark': '#11176dee',
 			},
 			spacing: {
 				'th-gap': '1rem',
@@ -52,9 +72,9 @@ export default {
 		function ({ addVariant }) {
       addVariant('width-sm', '.width-sm &')
 			addVariant('has-sub', '.has-sub &')
-			addVariant('_dark', '._dark &')
 			addVariant('size-m', '.size-m &')
 			addVariant('size-l', '.size-l &')
     }
 	],
+	darkMode: 'class',
 }

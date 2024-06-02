@@ -21,9 +21,9 @@ const cover = post.image;
 
 <Layout title={title} description={description} cover={cover}>
   <small class="text-[1.25em] block mt-[1.5em] mx-0 my-[1em] font-bold"><a href='/data/headless-wp/'>‹ Headless WordPress</a></small>
-  <article class='card bg-th-bg-1 shadow-th-shadow-2 rounded-th-rounded-2 border-[12px] border-solid border-th-bg-1 overflow-hidden grid md:grid-cols-2'>
+  <article class='card bg-th-bg-1 dark:bg-th-bg-1-dark shadow-th-shadow-2 rounded-th-rounded-2 border-[12px] border-solid border-th-bg-1 dark:border-th-bg-1-dark overflow-hidden grid md:grid-cols-2'>
     <img src={post.image} alt={post.title} class="rounded-th-rounded-2" />
-    <div class='content p-th-space md:p-5 lg:p-6 xl:p-[30px]'>
+    <div class='content p-4 md:p-5 lg:p-6 xl:p-[30px]'>
       <h1 class="mt-0 mx-0 my-4">
         {post.title}
       </h1>
