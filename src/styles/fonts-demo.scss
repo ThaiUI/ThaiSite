@@ -1,0 +1,264 @@
+// Anakotmai
+@font-face {
+  font-family: 'Anakotmai';
+  src: url('/fonts/anakotmai/anakotmai-light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Anakotmai';
+  src: url('/fonts/anakotmai/anakotmai-medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Anakotmai';
+  src: url('/fonts/anakotmai/anakotmai-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Anuphan
+@font-face {
+  font-family: 'Anuphan';
+  src: url('/fonts/anuphan/anuphan.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Anuphan';
+  src: url('/fonts/anuphan/anuphan-medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Anuphan';
+  src: url('/fonts/anuphan/anuphan-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Chulabhornlikit Text
+@font-face {
+  font-family: 'Chulabhornlikit Text';
+  src: url('/fonts/chulabhornlikit-text/chulabhornlikittext-light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Chulabhornlikit Text';
+  src: url('/fonts/chulabhornlikit-text/chulabhornlikittext-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Chulabhornlikit Text';
+  src: url('/fonts/chulabhornlikit-text/chulabhornlikittext-medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Chulabhornlikit Text';
+  src: url('/fonts/chulabhornlikit-text/chulabhornlikittext-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// CS Chatthai UI
+@font-face {
+  font-family: 'CS Chatthai UI';
+  src: url('/fonts/cs-chatthai-ui/cschatthaiui.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'CS Chatthai UI';
+  src: url('/fonts/cs-chatthai-ui/cschatthaiui-light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'CS Chatthai UI';
+  src: url('/fonts/cs-chatthai-ui/cschatthaiui-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// IBM Plex Thai
+@font-face {
+  font-family: 'IBM Plex Thai';
+  src: url('/fonts/ibm-plex-thai/ibmplexthai-light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Thai';
+  src: url('/fonts/ibm-plex-thai/ibmplexthai-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Thai';
+  src: url('/fonts/ibm-plex-thai/ibmplexthai-medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Thai';
+  src: url('/fonts/ibm-plex-thai/ibmplexthai-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Noto Serif
+
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('/fonts/noto-serif-thai/notoserif-light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('/fonts/noto-serif-thai/notoserif-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('/fonts/noto-serif-thai/notoserif-medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('/fonts/noto-serif-thai/notoserif-semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('/fonts/noto-serif-thai/notoserif-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Noto Serif Thai
+
+@font-face {
+  font-family: 'Noto Serif Thai';
+  src: url('/fonts/noto-serif-thai/notoserifthai-light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Noto Serif Thai';
+  src: url('/fonts/noto-serif-thai/notoserifthai-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Noto Serif Thai';
+  src: url('/fonts/noto-serif-thai/notoserifthai-medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Noto Serif Thai';
+  src: url('/fonts/noto-serif-thai/notoserifthai-semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Noto Serif Thai';
+  src: url('/fonts/noto-serif-thai/notoserifthai-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Sarabun
+@font-face {
+  font-family: 'Sarabun';
+  src: url('/fonts/sarabun/Sarabun-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sarabun';
+  src: url('/fonts/sarabun/Sarabun-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sarabun';
+  src: url('/fonts/sarabun/Sarabun-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sarabun';
+  src: url('/fonts/sarabun/Sarabun-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sarabun';
+  src: url('/fonts/sarabun/Sarabun-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// FORCE FONT DISPLAY
+.font-anakotmai * {
+  font-family: 'Anakotmai', sans-serif;
+}
+.font-anuphan * {
+  font-family: 'Anuphan', sans-serif;
+}
+.font-chulabhornlikit-text * {
+  font-family: 'Chulabhornlikit Text', sans-serif;
+}
+.font-cs-chatthai-ui * {
+  font-family: 'CS Chatthai UI', sans-serif;
+}
+.font-ibm-plex-thai * {
+  font-family: 'IBM Plex Thai', sans-serif;
+}
+.font-noto-serif-thai * {
+  font-family: 'Noto Serif Thai', 'Noto Serif', sans-serif;
+}
+.font-sarabun * {
+  font-family: 'Sarabun', sans-serif;
+}

@@ -1,0 +1,60 @@
+// VAR
+:root {
+  --th-color-1: #0c4da2;
+  --th-color-2: #3476ae;
+  --th-color-noti: #cb1515;
+  --th-text-1: #333;
+  --th-text-2: #71767f;
+  --th-text-3: #14314f;
+  --th-text-4: #222;
+  --th-bg-1: #fff;
+  --th-bg-2: #f5f5f7;
+  --th-bg-dark: #161d44;
+  --th-border-1: #d2d2d7;
+  --th-border-2: #e2e2e7;
+  --th-head-text: var(--th-text-1);
+  --th-head-bg: var(--th-bg-1);
+  --th-nav-text: #fff;
+  --th-nav-bg: var(--th-color-1);
+  --th-foot-text: #ffffffcc;
+  --th-foot-bg: var(--th-bg-dark);
+  --th-link-1: var(--th-color-1);
+  --th-link-2: var(--th-color-2);
+  --th-rounded-1: 3px;
+  --th-rounded-2: 5px;
+  --th-shadow-1: 0 0.5px 2px rgba(0, 0, 0, 0.16);
+  --th-shadow-2: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --th-body: 'Noto Sans Thai', 'Noto Sans', sans-serif;
+  --th-heading: var(--th-body);
+  --th-heading-weight: 700;
+  --th-gap: 1rem;
+  --th-space: 1rem;
+  --th-width-sm: 790px;
+  --th-width-lg: 1180px;
+  @media (min-width: 768px) {
+    --th-gap: 20px;
+    --th-space: 20px;
+  }
+  @media (min-width: 1024px) {
+    --th-space: 24px;
+  }
+  @media (min-width: 1200px) {
+    --th-space: 30px;
+  }
+}
+html._dark {
+  --th-color-1: #0c4da2;
+  --th-color-2: #3476ae;
+  --th-color-noti: #cb1515;
+  --th-text-1: #e4e6eb;
+  --th-text-2: #b0b3b8;
+  --th-bg-1: #242426;
+  --th-bg-2: #1c1e21;
+  --th-bg-dark: #000;
+  --th-border-1: #444;
+  --th-border-2: #333;
+  --th-nav-bg: #313131;
+  --th-nav-overlay: #11176dee;
+  --th-link-1: #fff;
+  --th-link-2: var(--th-color-2);
+}

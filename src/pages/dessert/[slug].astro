@@ -1,0 +1,62 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const { slug } = Astro.params;
+let res = await fetch(`https://i.thaiui.com/wp-json/root/v1/dessert?slug=${slug}`);
+let [post] = await res.json();
+
+export async function getStaticPaths() {
+  let data = await fetch('https://i.thaiui.com/wp-json/root/v1/dessert');
+  let posts = await data.json();
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post: post },
+  }));
+}
+
+const title = post.title;
+const description = post.excerpt || post.content.slice(0, 100);
+const cover = post.image;
+---
+
+<Layout title={title} description={description} cover={cover}>
+  <small class="text-[1.25em] block mt-[1.5em] mx-0 my-[1em] font-bold"><a href='/data/headless-wp/'>‹ Headless WordPress</a></small>
+  <article class='card bg-th-bg-1 shadow-th-shadow-2 rounded-th-rounded-2 border-[12px] border-solid border-th-bg-1 overflow-hidden grid md:grid-cols-2'>
+    <img src={post.image} alt={post.title} class="rounded-th-rounded-2" />
+    <div class='content p-th-space md:p-5 lg:p-6 xl:p-[30px]'>
+      <h1 class="mt-0 mx-0 my-4">
+        {post.title}
+      </h1>
+      <div set:html={post.content} />
+    </div>
+  </article>
+</Layout>
+
+<!-- <style lang='scss'>
+  small {
+    font-size: 1.25em;
+    display: block;
+    margin: 1.5em 0 1em;
+    font-weight: bold;
+  }
+  .card {
+    background-color: var(--th-bg-1);
+    box-shadow: var(--th-shadow-2);
+    border-radius: var(--th-rounded-2);
+    border: 12px solid var(--th-bg-1);
+    overflow: hidden;
+    display: grid;
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  img {
+    border-radius: var(--th-rounded-2);
+  }
+  h1 {
+    margin: 0 0 1rem;
+  }
+  .content {
+    padding: var(--th-space);
+  }
+</style> -->

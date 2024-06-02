@@ -1,0 +1,22 @@
+---
+const text = 'โดยที่การยอมรับศักดิ์ศรีแต่กำเนิด และสิทธิที่เท่าเทียมกันและที่ไม่อาจเพิกถอนได้ของสมาชิกทั้งมวลแห่งครอบครัวมนุษยชาติ เป็นพื้นฐานแห่งอิสรภาพ ความยุติธรรม และสันติภาพในโลก การไม่นำพาและการหมิ่นในคุณค่าของสิทธิมนุษยชน';
+
+let contents = [];
+for (let i = 0; i < 6; i++) { 
+  contents.push({
+    title: `ตัวอย่างหัวข้อ 03-${i + 1}`,
+    text: text,
+  });
+}
+---
+
+<div class='grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5 lg:gap-6 xl:gap-[30px] mb-4 md:mb-5 lg:mb-6 xl:mb-[30px] before:hidden after:hidden'>
+  {
+    contents.map((c) => (
+      <div>
+        <h2>{c.title}</h2>
+        <p>{c.text}</p>
+      </div>
+    ))
+  }
+</div>

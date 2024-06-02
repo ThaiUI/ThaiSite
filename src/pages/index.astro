@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Banner from '../components/Banner.astro';
+import Features from '../components/sections/Features.astro';
+const metadata = {
+  title: 'ไทยยูไอ',
+  description: 'Starter Theme for Astro by Seed Webs',
+}
+---
+
+<Layout title={metadata.title} description={metadata.description}>
+  <Banner
+    src='../../assets/img/banner.jpg'
+  />
+  <Features
+    id='features'
+    title='Lorem ipsum dolor sit amet,'
+    description='Lorem ipsum dolor sit amet, consectetur adipiscing elited do eiusmod tempor incididunt ut labore et dolore magna'
+  />
+</Layout>

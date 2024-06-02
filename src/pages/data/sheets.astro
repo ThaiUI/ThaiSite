@@ -1,0 +1,58 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const res = await fetch(
+  'https://script.google.com/macros/s/AKfycbzXOyGXkMRk7OQC3eNPfd90Ph74ombcWbuk_eig4aLPru4lwpntIVPF_ASfQyGmaymsrg/exec'
+);
+const { data } = await res.json();
+const title = 'ไทยยูไอ';
+const description = 'ตัวอย่างเทมเพลตเว็บภาษาไทยในรูปแบบ Astro';
+---
+
+<Layout title={title} description={description}>
+  <h1>Google Sheets</h1>
+  <h2 class='_h4'>
+    ตัวอย่างเนื้อหาจาก
+    <a href='https://www.facebook.com/thaitonecolor/' target='_blank'>
+      <strong>ชุดสี Thai Tone โดย อ.ไพโรจน์ พิทยเมธี →</strong>
+    </a>
+  </h2>
+  <p class='_space'>
+    โค้ดสี
+    <a href='https://poakpong.com/node/1998' target='_blank'> Hex Color Code โดย ปกป้อง →</a>
+     และ นำไปเก็บไว้ที่
+    <a
+      href='https://docs.google.com/spreadsheets/d/1QUhK65zSkMWYtr-e1W7831P_D01XVo_8NnyAweoFyQY/edit#gid=0'
+      target='_blank'
+    >
+      Google Sheets โดย ThaiUI →
+    </a>
+  </p>
+  <div class='grid md:grid-cols-3 lg:grid-cols-4 gap-[30px] mb-[30px] before:hidden after:hidden'>
+    {
+      data.map((color) => (
+        <div class='thaitone shadow:th-shadow-2 bg-th-bg-1 flex items-center gap-4 rounded-th-rounded-2 overflow-hidden'>
+          <div style={`background: ${color.code}`} class="w-[60px] h-[60px]" />
+          <span>
+            <pre>{color.code}</pre>
+            <strong>{color.name}</strong>
+          </span>
+        </div>
+      ))
+    }
+  </div>
+</Layout>
+<!-- <style lang='scss'>
+  .thaitone {
+    box-shadow: var(--th-shadow-2);
+    background-color: var(--th-bg-1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-radius: var(--th-rounded-2);
+    overflow: hidden;
+    > div {
+      width: 60px;
+      height: 60px;
+    }
+  }
+</style> -->

@@ -1,0 +1,36 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Content1 from '../../components/contents/Content1.astro';
+import Content2 from '../../components/contents/Content2.astro';
+import Content3 from '../../components/contents/Content3.astro';
+
+const title = 'ตัวอย่างส่วนหัว';
+const description = 'Starter Theme for Astro by Seed Webs';
+---
+
+<Layout title={title} description={description}>
+  <div class='_full bg-th-bg-dark text-[#ddd]'>
+    <div class='w-full max-w-th-width-lg mx-auto px-4 md:px-5'>
+      <h1>ตัวอย่างส่วนเนื้อหา</h1>
+    </div>
+  </div>
+
+  <div class='py-8 md:py-10 lg:py-12 xl:py-[60px]'>
+    <Content1 />
+  </div>
+
+  <div class='py-8 md:py-10 lg:py-12 xl:py-[60px]'>
+    <Content2 />
+  </div>
+
+  <div class='py-8 md:py-10 lg:py-12 xl:py-[60px]'>
+    <Content3 />
+  </div>
+</Layout>
+<!-- 
+<style>
+  .bg-dark {
+    background-color: var(--th-bg-dark);
+    color: #ddd;
+  }
+</style> -->

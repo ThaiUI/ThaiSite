@@ -1,0 +1,27 @@
+---
+import Layout from '../../layouts/Layout_Sidebar.astro';
+import Side from '../../components/about/Side.astro';
+import '../../styles/page.scss';
+export async function getStaticPaths() {
+  const posts = await Astro.glob('../../data/about/*.md');
+  return posts.map((post) => {
+    return {
+      params: { slug: post.frontmatter.slug },
+      props: { ...post },
+    };
+  });
+}
+const { Content, frontmatter } = Astro.props;
+const title = frontmatter.title;
+const description = frontmatter.description;
+---
+
+<Layout title={title} description={description}>
+  <aside slot='aside' class="order-2 md:order-1">
+    <Side />
+  </aside>
+  <article>
+    <h1 class="mt-0">{frontmatter.title}</h1>
+    <Content />
+  </article>
+</Layout>

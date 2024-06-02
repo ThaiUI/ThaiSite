@@ -1,0 +1,11 @@
+---
+import { Picture } from 'astro:assets';
+const { src, alt = '', classes = 'w-full', ...attrs } = Astro.props;
+---
+<Picture
+  src={import(src)}
+  formats={['avif', 'webp']}
+  class={classes}
+  alt={alt}
+  {...attrs}
+/>

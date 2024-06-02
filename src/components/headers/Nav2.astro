@@ -1,0 +1,39 @@
+---
+import { Icon } from 'astro-icon';
+const nav = [
+  { name: 'หน้าแรก', link: '/' },
+  { name: 'เกี่ยวกับเรา', link: '/about' },
+  { name: 'ตัวอย่างส่วนหัว', link: '/headers' },
+  { name: 'ตัวอย่างเนื้อหา', link: '/contents' },
+  { name: 'ตัวอย่างส่วนท้าย', link: '/footers' },
+  { name: 'บทความจาก WordPress', link: '/wordpress' },
+  { name: 'เนื้อหาจาก Notion', link: '/notion' },
+  { name: 'ตารางจาก Google Sheet', link: '/googlesheet' },
+];
+---
+
+<input type='checkbox' id='nav-open' aria-label='Toggle Mobile Menu' />
+<div class='th-nav z-[900] bg-th-nav-bg text-th-nav-text lg:p-0 lg:sticky lg:top-0'>
+  <div class='w-full max-w-th-width-lg mx-auto px-4 md:px-5'>
+    <label class='nav-toggle flex lg:hidden items-center gap-1.5 fixed top-[1em] right-4 px-1.5 py-0.5 text-th-head-text border-[1.5px] border-solid border-th-head-text rounded-th-rounded-1' for='nav-open'>
+      <Icon name='menu' height='24' /><span class="text-base">เมนู</span>
+    </label>
+    <nav>
+      <label class='close' for='nav-open'>
+        <Icon name='close flex lg:hidden items-center gap-1.5 rounded-th-rounded-1 border-[1.5px] border-solid px-1.5 py-[3px] absolute top-[1em] right-4' height='24' /><span>ปิดเมนู</span>
+      </label>
+      <ul class="py-0 pr-4 pl-6 m-0 h-full overflow-auto lg:p-0 lg:height-[unset] lg:flex lg:flex-wrap lg:gap-y-0 lg:gap-x-[1.5em] lg:overflow-visible">
+        {
+          nav.map((n) => (
+            <li class="list-none px-0 py-2 flex flex-wrap items-center min-h-10 w-full relative lg:w-auto lg:min-h-[54px]">
+              <a href={n.link} class="text-th-nav-text hover:text-th-nav-text hover:opacity-80" rel='prefetch'>
+                {n.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <label class='bg flex lg:hidden items-center gap-1.5 absolute h-full w-screen right-full top-0 bg-black/50' for='nav-open'></label>
+    </nav>
+  </div>
+</div>

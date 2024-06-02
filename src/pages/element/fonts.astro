@@ -1,0 +1,61 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/fonts-demo.scss';
+
+const fonts = [
+  { slug: 'noto-sans-thai', en: 'Noto Sans Thai', th: 'โนโต ซานส์ ไทย' },
+  { slug: 'noto-serif-thai', en: 'Noto Serif Thai', th: 'โนโต เซริฟ ไทย' },
+  { slug: 'anakotmai', en: 'Anakotmai', th: 'อนาคตใหม่' },
+  { slug: 'anuphan', en: 'Anuphan', th: 'อนุพันธ์' },
+  { slug: 'chulabhornlikit-text', en: 'Chulabhornlikit Text', th: 'จุฬาภรณ์ ลิขิต เท็กซ์' },
+  { slug: 'cs-chatthai-ui', en: 'CS Chatthai UI', th: 'ซีเอส ชาติไทย ยูไอ' },
+  { slug: 'ibm-plex-thai', en: 'IBM Plex Thai', th: 'ไอบีเอ็ม เพล็กซ์ ไทย' },
+  { slug: 'sarabun', en: 'Sarabun', th: 'สารบัญ' },
+];
+const title = 'ตัวอย่างฟอนต์ไทย';
+const description = 'Starter Theme for Astro by Seed Webs';
+---
+
+<Layout title={title} description={description}>
+  <h1>{title}</h1>
+  <br />
+  {
+    fonts.map((font) => (
+      <div class={`font-${font.slug}`}>
+        <h2 class='title inline-block py-[0.5em] px-[1em] border-[0.125em] border-solid mb-8 border-th-text-1'>{font.en}</h2>
+        <div class='grid lg:grid-cols-2 gap-[30px] mb-[30px] before:hidden after:hidden'>
+          <div>
+            <h2 class='_h1'>H1 • หัวข้อระดับ 1</h2>
+            <h2>H2 • หัวข้อระดับ 2</h2>
+            <h3>H3 • หัวข้อระดับ 3</h3>
+            <h4>H4 • หัวข้อระดับ 4</h4>
+            <h5>H5 • หัวข้อระดับ 5</h5>
+            <h6>H6 • หัวข้อระดับ 6</h6>
+          </div>
+          <div>
+            <h2>{font.th}</h2>
+            <p>
+              โดยที่การยอมรับศักดิ์ศรีแต่กำเนิด
+              และสิทธิที่เท่าเทียมกันและที่ไม่อาจเพิกถอนได้ของสมาชิกทั้งมวลแห่งครอบครัวมนุษยชาติ เป็นพื้นฐานแห่งอิสรภาพ
+              ความยุติธรรม และสันติภาพในโลก การไม่นำพาและการหมิ่นในคุณค่าของสิทธิมนุษยชน ยังผลให้มีการกระทำอันป่าเถื่อน
+              ซึ่งเป็นการขัดอย่างร้ายแรงต่อมโนธรรมของมนุษยชาติ
+              และการมาถึงของโลกที่ได้มีการประกาศให้ความมีอิสรภาพในการพูดและความเชื่อ
+              และอิสรภาพจากความหวาดกลัวและความต้องการของมนุษย์ เป็นความปรารถนาสูงสุดของประชาชนทั่วไป
+              โดยที่เป็นการจำเป็นที่สิทธิมนุษยชนควรได้รับความคุ้มครองโดยหลักนิติธรรม
+            </p>
+          </div>
+        </div>
+        <hr />
+      </div>
+    ))
+  }
+</Layout>
+
+<!-- <style lang='scss'>
+  .title {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 0.125em solid;
+    margin-bottom: 2rem;
+  }
+</style> -->

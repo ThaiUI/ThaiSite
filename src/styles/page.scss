@@ -1,0 +1,17 @@
+article {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    background-color: var(--th-bg-1);
+    box-shadow: var(--th-shadow-1);
+  }
+  th,
+  td {
+    padding: 0.5em 0.75em;
+    border-bottom: 1px solid var(--th-border-2);
+  }
+  tr:last-child td {
+    border-bottom: none;
+  }
+}

@@ -1,0 +1,225 @@
+// INI
+h1,
+._h1 {
+  font-size: 1.8em;
+  @media (min-width: 1024px) {
+    font-size: 2em;
+  }
+}
+h2,
+._h2 {
+  font-size: 1.75em;
+}
+h3,
+._h3 {
+  font-size: 1.5em;
+}
+h4,
+._h4 {
+  font-size: 1.25em;
+}
+h5,
+._h5 {
+  font-size: 1em;
+}
+h6 {
+  font-size: 0.875em;
+}
+html {
+  font-family: var(--th-body);
+  background-color: var(--th-bg-1);
+  color: var(--th-text-1);
+  overflow-x: hidden;
+  width: 100%;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+  transition: 0.3s ease;
+  cursor: pointer;
+  color: var(--th-link-1);
+  &:hover {
+    color: var(--th-link-2);
+  }
+}
+table {
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+th {
+  text-align: left;
+}
+th,
+td {
+  vertical-align: top;
+}
+ol,
+ul {
+  margin: 0 0 1.5em 0;
+  padding-left: 1.2em;
+}
+nav,
+button,
+label,
+legend {
+  line-height: 1.3;
+  font-family: var(--th-heading);
+}
+label {
+  cursor: pointer;
+}
+hr {
+  margin-top: var(--th-space);
+  margin-bottom: var(--th-space);
+  border: none;
+  border-bottom: 1px solid var(--th-border-2);
+}
+blockquote {
+  font-family: var(--th-heading);
+  line-height: 1.6;
+  font-size: 1.125em;
+  margin-top: calc(var(--th-space) * 1.25);
+  margin-bottom: calc(var(--th-space) * 1.25);
+  padding: var(--th-gap);
+  border-left: 3px solid var(--th-border-1);
+  background-color: var(--th-bg-1);
+  box-shadow: var(--th-shadow-1);
+  border-radius: var(--th-rounded-2);
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+fieldset {
+  border: 1px solid var(--th-border-1);
+  padding: var(--th-gap);
+  margin: 1rem 0;
+  border-radius: var(--th-rounded-1);
+}
+code {
+  background-color: var(--th-bg-2);
+  padding: 0.25em 0.5em;
+  border-radius: var(--th-rounded-1);
+  border: 1px solid var(--th-border-2);
+}
+.astro-code {
+  padding: var(--th-gap);
+  code {
+    background: unset;
+    padding: unset;
+    border: unset;
+  }
+}
+
+// HELPER
+._sr {
+  // For Screen Reader
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+._space {
+  margin-bottom: var(--th-space);
+}
+@media (max-width: 1023px) {
+  ._desktop {
+    display: none !important;
+  }
+}
+@media (min-width: 1024px) {
+  ._mobile {
+    display: none !important;
+  }
+}
+._full {
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  max-width: 100vw;
+  width: unset;
+  overflow-x: hidden;
+}
+
+// LAYOUT
+// .th-container {
+//   width: 100%;
+//   max-width: var(--th-width-lg);
+//   margin-left: auto;
+//   margin-right: auto;
+//   padding-left: var(--th-gap);
+//   padding-right: var(--th-gap);
+// }
+// .width-sm {
+//   main.th-container {
+//     max-width: var(--th-width-sm);
+//   }
+// }
+// .th-sec {
+//   padding-top: calc(2 * var(--th-space));
+//   padding-bottom: calc(2 * var(--th-space));
+// }
+// .th-grid {
+//   display: grid;
+//   grid-gap: var(--th-space);
+//   margin-bottom: var(--th-space);
+//   &.-m2 {
+//     grid-template-columns: repeat(2, minmax(0, 1fr));
+//   }
+//   &.-m3 {
+//     grid-template-columns: repeat(3, minmax(0, 1fr));
+//   }
+//   &::before,
+//   &::after {
+//     display: none;
+//   }
+//   @media (min-width: 720px) and (max-width: 1023px) {
+//     &.-t2 {
+//       grid-template-columns: repeat(2, minmax(0, 1fr));
+//     }
+//     &.-t3 {
+//       grid-template-columns: repeat(3, minmax(0, 1fr));
+//     }
+//     &.-t4 {
+//       grid-template-columns: repeat(4, minmax(0, 1fr));
+//     }
+//   }
+//   @media (min-width: 1024px) {
+//     &.-d1 {
+//       grid-template-columns: minmax(0, 1fr);
+//     }
+//     &.-d2 {
+//       grid-template-columns: repeat(2, minmax(0, 1fr));
+//     }
+//     &.-d3 {
+//       grid-template-columns: repeat(3, minmax(0, 1fr));
+//     }
+//     &.-d4 {
+//       grid-template-columns: repeat(4, minmax(0, 1fr));
+//     }
+//     &.-d5 {
+//       grid-template-columns: repeat(5, minmax(0, 1fr));
+//     }
+//     &.-d6 {
+//       grid-template-columns: repeat(6, minmax(0, 1fr));
+//     }
+//   }
+// }
+
+// BASIC TAILWIND
+// .text-center {
+//   text-align: center;
+// }
+// .mt-0 {
+//   margin-top: 0;
+// }
+// .mb-0 {
+//   margin-bottom: 0;
+// }

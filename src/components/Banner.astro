@@ -1,0 +1,7 @@
+---
+import Image from '../components/ui/Image.astro';
+const { src } = Astro.props;
+---
+<div class='banner max-w-screen w-screen mx-[calc(-50vw_+_50%)]'>
+  <Image src={src} classes='w-screen h-[520px] object-cover' formats={['avif', 'webp']} alt='ThaiUI' />
+</div>

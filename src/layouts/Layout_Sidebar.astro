@@ -1,0 +1,14 @@
+---
+import Base from './Base.astro';
+import '../styles/layout_sidebar.scss';
+const { title, description, bodyclass = '', cover = '/cover.png' } = Astro.props;
+---
+
+<Base title={title} description={description} bodyclass={bodyclass} cover={cover}>
+  <div class='w-full max-w-th-width-lg grid md:grid-cols-[1fr_3fr] lg:grid-cols-[1fr_4fr] md:gap-[30px] lg:gap-10 mx-auto mt-4 md:mt-5 lg:mt-6 xl:mt-[30px] px-4 md:px-5 side-content'>
+    <main id='content' class="order-1 md:order-2">
+      <slot />
+    </main>
+    <slot name='aside' class="order-2 md:order-1" />
+  </div>
+</Base>

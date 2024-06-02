@@ -1,0 +1,69 @@
+---
+import { Icon } from 'astro-icon';
+import '../styles/nav.scss';
+const nav = [
+  { name: 'หน้าแรก', link: '/' },
+  { name: 'เกี่ยวกับเรา', link: '/about/' ,
+    sub: [
+      { name: 'เกี่ยวกับไทยยูไอ', link: '/about/' },
+      { name: 'โครงสร้างไฟล์', link: '/about/structure/' },
+      { name: 'คลาสของ CSS', link: '/about/css/' },
+    ],
+  },
+  { name: 'ตัวอย่างชิ้นส่วน', link: '/element/' ,
+    sub: [
+      { name: 'ตัวอย่างส่วนหัว', link: '/element/headers/' },
+      { name: 'ตัวอย่างฟอนต์ไทย', link: '/element/fonts/' },
+      { name: 'ตัวอย่างเนื้อหา', link: '/element/contents/' },
+      { name: 'ตัวอย่างส่วนท้าย', link: '/element/footers/' },
+    ],
+  },
+  {
+    name: 'ตัวอย่างแหล่งข้อมูล',
+    link: '/data/',
+    sub: [
+      { name: 'Basic WordPress', link: '/data/wp/' },
+      { name: 'Headless WordPress', link: '/data/headless-wp/' },
+      { name: 'Google Sheets', link: '/data/sheets/' },
+    ],
+  },
+];
+---
+
+<input type='checkbox' id='nav-open' class="absolute top-0 left-0 opacity-0" name='nav-open' aria-label='Toggle Mobile Menu' />
+<div class='th-nav z-[900] bg-th-nav-bg text-th-nav-text lg:p-0 lg:sticky lg:top-0'>
+  <div class='w-full max-w-th-width-lg mx-auto px-4 md:px-5'>
+    <label class='nav-toggle flex lg:hidden items-center gap-1.5 fixed top-[1em] right-4 px-1.5 py-0.5 text-th-head-text border-[1.5px] border-solid border-th-head-text rounded-th-rounded-1' for='nav-open'>
+      <Icon name='menu' height='24' /><span class="text-base">เมนู</span>
+    </label>
+    <nav class="nav-content invisible opacity-0 w-[280px] absolute top-0 h-dvh right-0 z-[900] shadow-th-shadow-2 translate-x-full bg-th-nav-bg p-0 pt-[60px] text-[1.125em] lg:translate-x-0 lg:opacity-100 lg:visible lg:bg-none lg:shadow-none lg:w-[unset] lg:relative lg:top-[unset] lg:right-[unset] lg:h-[unset] lg:p-[unset] lg:overflow-visible">
+      <label class='close flex lg:hidden items-center gap-1.5 rounded-th-rounded-1 border-[1.5px] border-solid px-1.5 py-[3px] absolute top-[1em] right-4' for='nav-open'>
+        <Icon name='close' class="p-0.5" height='24' /><span class="text-base whitespace-nowrap">ปิดเมนู</span>
+      </label>
+      <ul class="py-0 pr-4 pl-6 m-0 h-full overflow-auto lg:p-0 lg:height-[unset] lg:flex lg:flex-wrap lg:gap-y-0 lg:gap-x-[1.5em] lg:overflow-visible">
+        {
+          nav.map((n) => (
+            <li class={(n.sub ? ('list-none px-0 py-2 flex flex-wrap items-center min-h-10 w-full relative lg:w-auto lg:min-h-[54px] has-sub lg:pr-6 group') : 'list-none px-0 py-2 flex flex-wrap items-center min-h-10 w-full relative lg:w-auto lg:min-h-[54px]')}>
+              <a href={n.link} class="text-th-nav-text hover:text-th-nav-text hover:opacity-80" rel='prefetch'>
+                {n.name}
+              </a>
+              {n.sub && (
+                <span class="i-down absolute top-[0.5em] right-0 p-1.5 ml-auto leading-[0] border border-solid rounded-th-rounded-1 cursor-pointer z-[1] lg:border-none lg:top-[calc(50%_-_11px)]">
+                  <Icon name="dropdown" class="pointer-events-none duration-300 ease group-hover:lg:scale-y-[-1] group-hover:lg:opacity-80" height="10" width="10" />
+                </span>
+                <ul class='sub-menu invisible opacity-0 p-0 m-0 h-0 w-full overflow-hidden transition-[0.4s] ease-out text-[0.8em] lg:text-left lg:top-full lg:-left-4 lg:absolute lg:z-10 lg:h-0 lg:bg-th-nav-bg lg:min-w-[180px] lg:w-max lg:max-w-[400px] lg:overflow-hidden group-hover:lg:visible group-hover:lg:overflow-visible group-hover:lg:h-auto group-hover:lg:opacity-100 group-hover:lg:pt-4 group-hover:lg:px-0 group-hover:lg:pb-2.5 group-hover:lg:translate-y-[-10px] group-hover:lg:z-[1]'>
+                  {n.sub.map((s) => (
+                    <li class="list-none px-0 py-2 flex flex-wrap items-center min-h-10 w-full lg:w-auto lg:min-h-[unset]">
+                      <a href={s.link} class="text-th-nav-text hover:text-th-nav-text hover:opacity-80 lg:block lg:py-0 lg:px-4">{s.name}</a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))
+        }
+      </ul>
+      <label class='bg flex lg:hidden items-center gap-1.5 absolute h-full w-screen right-full top-0 bg-black/50' for='nav-open'></label>
+    </nav>
+  </div>
+</div>

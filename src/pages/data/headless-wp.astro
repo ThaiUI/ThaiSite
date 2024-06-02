@@ -1,0 +1,77 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const res = await fetch('https://i.thaiui.com/wp-json/root/v1/dessert');
+const posts = await res.json();
+const title = 'Headless WordPress';
+const description = 'ตัวอย่างการนำบทความจาก Headless WordPress มาแสดง';
+---
+
+<Layout title={title} description={description}>
+  <h1>{title}</h1>
+  <p>
+    ตัวอย่างการนำบทความจากเว็บ WordPress โดยเรียกผ่าน
+    <a href='https://developer.wordpress.org/rest-api/' target='_blank'>WordPress REST API</a>
+     แบบ
+    <a href='https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-custom-endpoints/'>
+      Custom Endpoints
+    </a>
+  </p>
+  <p>
+    เช่น เว็บไซต์ <strong>i.thaiui.com</strong> ที่ทำการติดตั้งธีม
+    <strong>
+      <a href='https://github.com/SeedWebs/root' target='_blank'>Root</a>
+    </strong>
+     จะมี Custom Endpoints ที่เรียกข้อมูลจาก WordPress ที่อยู่ที่
+    <code>
+      <a href='https://i.thaiui.com/wp-json/root/v1/dessert' target='_blank'>
+        https://i.thaiui.com/wp-json/root/v1/dessert
+      </a>
+    </code>
+  </p>
+  <p>นำข้อมูลมาแสดงดังนี้</p>
+  <br />
+  <h2>ตัวอย่างขนมไทย</h2>
+
+  <div class='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px] mb-[30px] before:hidden after:hidden'>
+    {
+      posts.map((post) => (
+        <a class='card bg-th-bg-1 rounded-th-rounded-2 shadow-th-shadow-1 overflow-hidden border-[6px] border-solid border-th-bg-1 duration-300 ease-in-out text-th-text-1 hover:cursor-pointer hover:scale-[1.06] hover:shadow-th-shadow-2 hover:border-[10px] hover:border-solid hover:border-th-bg-1 hover:text-th-text-1' href={`/dessert/${post.slug}`}>
+          <img src={post.thumb} alt={post.title} />
+          <h2 class='title text-[1.5em] mt-4 mb-2 mx-4'>{post.title}</h2>
+          <div class='excerpt text-[0.9375em] mt-0 mx-4 mb-4 text-ellipsis line-clamp-3' set:html={post.content} />
+        </a>
+      ))
+    }
+  </div>
+</Layout>
+
+<!-- <style lang='scss'>
+  .card {
+    background-color: var(--th-bg-1);
+    border-radius: var(--th-rounded-2);
+    box-shadow: var(--th-shadow-1);
+    overflow: hidden;
+    border: 6px solid var(--th-bg-1);
+    transition: 0.3s ease-in-out;
+    color: var(--th-text-1);
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.06);
+      box-shadow: var(--th-shadow-2);
+      border: 10px solid var(--th-bg-1);
+    }
+  }
+  .title {
+    font-size: 1.5em;
+    margin: 8px 16px;
+  }
+  .excerpt {
+    font-size: 0.9375em;
+    margin: 0 16px 16px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style> -->
