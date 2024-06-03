@@ -1,0 +1,27 @@
+---
+import Card from '../../components/ui/Card.astro';
+const { title, items = [], classes } = Astro.props;
+const className = `grid ${classes} pl-0`;
+---
+
+{
+  items && (
+    <>
+      <h2
+        set:html={title}
+        class='mb-12 text-center text-2xl text-th-text-3 font-normal'
+      />
+      <section class={className}>
+        {items.map((i) => (
+          <Card
+            title={i.title}
+            thumbnail={i.thumbnail}
+            link={i.link}
+            date={i.date}
+            categories={i.categories}
+          />
+        ))}
+      </section>
+    </>
+  )
+}

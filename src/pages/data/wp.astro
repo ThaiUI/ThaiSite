@@ -3,19 +3,26 @@ import Layout from '../../layouts/Layout.astro';
 const res = await fetch('https://seedx.seeddemo.com/wp-json/wp/v2/posts');
 const posts = await res.json();
 const title = 'Basic WordPress';
-const description = 'ตัวอย่างการนำบทความจากเว็บ WordPress ทั่วไปมาแสดงผ่าน /wp-json/wp/v2/posts';
+const description =
+  'ตัวอย่างการนำบทความจากเว็บ WordPress ทั่วไปมาแสดงผ่าน /wp-json/wp/v2/posts';
 ---
 
 <Layout title={title} description={description}>
   <h1>{title}</h1>
   <p>
     ตัวอย่างการนำบทความจากเว็บ WordPress ทั่วไปมาแสดงผ่านการเรียก
-    <a href='https://developer.wordpress.org/rest-api/' target='_blank'>WordPress REST API</a>
+    <a href='https://developer.wordpress.org/rest-api/' target='_blank'
+      >WordPress REST API</a
+    >
     <code>/wp-json/wp/v2/posts</code>
   </p>
   <p>
-    เช่น เว็บไซต์ <strong><a href='https://seedx.seeddemo.com/' target='_blank'>seedx.seeddemo.com</a></strong>
-     เรียกข้อมูลที่
+    เช่น เว็บไซต์ <strong
+      ><a href='https://seedx.seeddemo.com/' target='_blank'
+        >seedx.seeddemo.com</a
+      ></strong
+    >
+    เรียกข้อมูลที่
     <code>
       <a href='https://seedx.seeddemo.com/wp-json/wp/v2/posts' target='_blank'>
         https://seedx.seeddemo.com/wp-json/wp/v2/posts
@@ -24,10 +31,12 @@ const description = 'ตัวอย่างการนำบทความ�
   </p>
   <br />
   <h2>เนื้อหาจาก REST API</h2>
-  <div class='grid md:grid-cols-2 lg:grid-cols-3 gap-[30px] mb-[30px] before:hidden after:hidden'>
+  <div
+    class='grid md:grid-cols-2 lg:grid-cols-3 gap-[30px] mb-[30px] before:hidden after:hidden'
+  >
     {
       posts.slice(0, 9).map((post) => (
-        <article class="bg-th-bg-1 dark:bg-th-bg-1-dark shadow-th-shadow-2 rounded-th-rounded-2 pt-4 lg:pt-5 px-4 lg:px-5 pb-1.5">
+        <article class='bg-th-bg-1 dark:bg-th-bg-1-dark shadow-th-shadow-2 rounded-th-rounded-2 pt-4 lg:pt-5 px-4 lg:px-5 pb-1.5'>
           <h2 set:html={post.title.rendered} />
           <div set:html={post.excerpt.rendered} />
         </article>

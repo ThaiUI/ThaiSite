@@ -23,10 +23,20 @@ export default {
 				'th-text-3-dark': '#fff',
 				'th-text-4': '#222',
 				'th-text-4-dark': '#fff',
+				'th-text-5': '#64717c',
+				'th-text-5-dark': '#fff',
+				'th-text-6': '#919ea6',
+				'th-text-5-dark': '#fff',
 				'th-bg-1': '#fff',
 				'th-bg-1-dark': '#242426',
 				'th-bg-2': '#f5f5f7',
 				'th-bg-2-dark': '#1c1e21',
+				'th-bg-3': '#e9eff8',
+				'th-bg-3-dark': '#1c1e21',
+				'th-bg-4': '#f5f5f5',
+				'th-bg-4-dark': '#1c1e21',
+				'th-bg-5': '#2060b6',
+				'th-bg-5-dark': '#1c1e21',
 				'th-bg-dark': '#161d44',
 				'th-bg-dark-dark': '#000',
 				'th-border-1': '#d2d2d7',
@@ -43,6 +53,8 @@ export default {
 				'th-foot-text': '#ffffffcc',
 				'th-foot-bg': '#161d44',
 				'th-foot-bg-dark': '#000',
+				'th-foot-bg-2': '#14314f',
+				'th-foot-bg-2-dark': '#000',
 				'th-link-1': '#0c4da2',
 				'th-link-1-dark': '#fff',
 				'th-link-2': '#3476ae',
@@ -65,7 +77,10 @@ export default {
 			borderRadius: {
 				'th-rounded-1': '3px',
 				'th-rounded-2': '5px',
-			}
+			},
+			backgroundImage: {
+        'slogan': "url('/img/bg-slogan.jpg')",
+      }
 		},
 	},
 	plugins: [

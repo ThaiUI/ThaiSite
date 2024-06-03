@@ -1,7 +1,21 @@
 ---
-const { title, description } = Astro.props;
+import { Icon } from 'astro-icon';
+const { items = [], classes } = Astro.props;
+const className = `grid gap-y-8 ${classes} pl-0 text-center`;
 ---
-<section class='text-center'>
-  <h1 class='text-2xl text-th-text-3 dark:text-th-text-3-dark'>{title}</h1>
-  <p class="text-th-text-4 dark:text-th-text-4-dark">{description}</p>
-</section>
+
+{
+  items && (
+    <section class={className}>
+      {items.map((i) => (
+        <div class='max-w-60 mx-auto'>
+          <Icon name={i.icon} class='mx-auto w-auto h-[60px]' />
+          <h2 class='mt-6 mb-2 text-lg text-th-text-3 font-normal'>
+            {i.title}
+          </h2>
+          <p class='mb-0 text-sm text-th-text-5'>{i.description}</p>
+        </div>
+      ))}
+    </section>
+  )
+}

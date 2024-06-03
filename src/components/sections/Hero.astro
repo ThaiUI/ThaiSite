@@ -1,0 +1,26 @@
+---
+import Image from '../../components/ui/Image.astro';
+const { title, description, thumbnail } = Astro.props;
+---
+
+<section
+  class='max-w-screen w-screen mx-[calc(-50vw_+_50%)] mb-20 h-[340px] bg-th-bg-3'
+>
+  <div
+    class='w-full width-sm:max-w-th-width-sm max-w-th-width-lg mx-auto px-4 md:px-5 lg:px-6 xl:px-[30px] pb-4 md:pb-5 lg:pb-6 xl:pb-[30px]'
+  >
+    <div class='grid grid-cols-2 items-center'>
+      <div class='w-[50vw] ml-[calc(-50vw_+_100%)]'>
+        <Image
+          src='/img/thumbnail-4.jpg'
+          classes='w-full h-[340px] object-cover'
+          alt='ThaiUI'
+        />
+      </div>
+      <div class='pl-16'>
+        <h3 set:html={title} class='mb-5 text-2xl text-th-text-3 font-normal' />
+        <p set:html={description} class='mb-0 text-th-text-4' />
+      </div>
+    </div>
+  </div>
+</section>

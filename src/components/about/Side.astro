@@ -1,20 +1,43 @@
 ---
 const pages = await Astro.glob('../../data/about/*.md');
-const path = new URL(Astro.request.url).pathname.replace(/\/$/, "").split('/');
-let a = new URL(Astro.request.url).pathname.replace(/\/$/, "");
+const path = new URL(Astro.request.url).pathname.replace(/\/$/, '').split('/');
+let a = new URL(Astro.request.url).pathname.replace(/\/$/, '');
 const current = path[2];
 const root = current === undefined ? true : false;
 ---
 
-<ul class="divide-y p-0 bg-th-bg-1 dark:bg-th-bg-1-dark shadow-th-shadow-1 rounded-th-rounded-2 overflow-hidden">
-  <li class="list-none px-4 py-2.5 border-dashed border-th-border-2 dark:border-th-border-2-dark"><h2 class="m-0 text-xl leading-[1.625rem]">เกี่ยวกับเรา</h2></li>
-  <li class={root ? 'list-none px-4 py-2.5 border-dashed border-th-border-2 dark:border-th-border-2-dark pl-[13px] font-bold border-l-[3px] border-l-th-color-1 dark:border-l-th-color-1-dark active' : 'list-none px-4 py-2.5 border-dashed border-th-border-2 dark:border-th-border-2-dark'}>
-    <a href='/about/' class="text-th-link-1 dark:text-th-link-1-dark">เกี่ยวกับไทยยูไอ</a>
+<ul
+  class='divide-y p-0 bg-th-bg-1 dark:bg-th-bg-1-dark shadow-th-shadow-1 rounded-th-rounded-2 overflow-hidden'
+>
+  <li
+    class='list-none px-4 py-2.5 border-dashed border-th-border-2 dark:border-th-border-2-dark'
+  >
+    <h2 class='m-0 text-xl leading-[1.625rem]'>เกี่ยวกับเรา</h2>
+  </li>
+  <li
+    class={root
+      ? 'list-none px-4 py-2.5 border-dashed border-th-border-2 dark:border-th-border-2-dark pl-[13px] font-bold border-l-[3px] border-l-th-color-1 dark:border-l-th-color-1-dark active'
+      : 'list-none px-4 py-2.5 border-dashed border-th-border-2 dark:border-th-border-2-dark'}
+  >
+    <a href='/about/' class='text-th-link-1 dark:text-th-link-1-dark'
+      >เกี่ยวกับไทยยูไอ</a
+    >
   </li>
   {
     pages.map((page) => (
-      <li class={current === page.frontmatter.slug ? 'list-none px-4 py-2.5 border-dashed border-th-border-2 dark:border-th-border-2-dark pl-[13px] font-bold border-l-[3px] border-l-th-color-1 dark:border-l-th-color-1-dark active' : 'list-none px-4 py-2.5 border-dashed border-th-border-2 dark:border-th-border-2-dark'}>
-        <a href={`/about/${page.frontmatter.slug}/`} class="text-th-link-1 dark:text-th-link-1-dark">{page.frontmatter.title}</a>
+      <li
+        class={
+          current === page.frontmatter.slug
+            ? 'list-none px-4 py-2.5 border-dashed border-th-border-2 dark:border-th-border-2-dark pl-[13px] font-bold border-l-[3px] border-l-th-color-1 dark:border-l-th-color-1-dark active'
+            : 'list-none px-4 py-2.5 border-dashed border-th-border-2 dark:border-th-border-2-dark'
+        }
+      >
+        <a
+          href={`/about/${page.frontmatter.slug}/`}
+          class='text-th-link-1 dark:text-th-link-1-dark'
+        >
+          {page.frontmatter.title}
+        </a>
       </li>
     ))
   }

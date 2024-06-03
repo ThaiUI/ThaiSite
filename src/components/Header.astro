@@ -6,13 +6,27 @@ import ButtonSize from './ButtonSize.astro';
 const SiteTitle = 'ไทยยูไอ';
 ---
 
-<header id='head' class="sticky lg:relative top-0 py-4 lg:py-5 px-0 bg-th-head-bg dark:bg-th-head-bg-dark text-th-head-text dark:text-th-head-text-dark leading-[1.8rem] border-b-[3px] lg:border-b-0 border-solid border-th-nav-bg dark:border-th-nav-bg-dark">
-  <div class='w-full max-w-th-width-lg mx-auto px-4 md:px-5 flex items-center gap-4'>
-    <a href='/' class='flex items-center gap-[0.9rem] text-[1.5em] lg:text-[2.25em] dark:text-th-link-1-dark leading-[1.8rem]' title='Home'>
+<header
+  id='head'
+  class='sticky lg:relative top-0 py-4 lg:py-5 px-0 bg-th-head-bg dark:bg-th-head-bg-dark text-th-head-text dark:text-th-head-text-dark leading-[1.8rem] border-b-[3px] lg:border-b-0 border-solid border-th-nav-bg dark:border-th-nav-bg-dark'
+>
+  <div
+    class='w-full max-w-th-width-lg mx-auto px-4 md:px-5 flex items-center gap-4'
+  >
+    <a
+      href='/'
+      class='flex items-center gap-[0.9rem] text-[1.5em] lg:text-[2.25em] dark:text-th-link-1-dark leading-[1.8rem]'
+      title='Home'
+    >
       <Icon name='logo' width='1.5em' height='1.5em' />
-      <strong class="leading-[1.8rem] lg:leading-[2.7rem] pt-[0.2rem] md:pt-[0.337rem]">{SiteTitle}</strong>
+      <strong
+        class='leading-[1.8rem] lg:leading-[2.7rem] pt-[0.2rem] md:pt-[0.337rem]'
+        >{SiteTitle}</strong
+      >
     </a>
-    <small class='hidden lg:block pt-[0.5rem] text-[0.9em] opacity-80'>ตัวอย่างเทมเพลตเว็บภาษาไทยในรูปแบบ Astro</small>
+    <small class='hidden lg:block pt-[0.5rem] text-[0.9em] opacity-80'
+      >ตัวอย่างเทมเพลตเว็บภาษาไทยในรูปแบบ Astro</small
+    >
     <div class='flex gap-4 pr-20 lg:pr-0 items-center ml-auto'>
       <ButtonMode />
       <ButtonSize />

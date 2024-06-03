@@ -18,8 +18,10 @@ const description = 'ตัวอย่างเทมเพลตเว็บ�
   </h2>
   <p class='_space'>
     โค้ดสี
-    <a href='https://poakpong.com/node/1998' target='_blank'> Hex Color Code โดย ปกป้อง →</a>
-     และ นำไปเก็บไว้ที่
+    <a href='https://poakpong.com/node/1998' target='_blank'>
+      Hex Color Code โดย ปกป้อง →</a
+    >
+    และ นำไปเก็บไว้ที่
     <a
       href='https://docs.google.com/spreadsheets/d/1QUhK65zSkMWYtr-e1W7831P_D01XVo_8NnyAweoFyQY/edit#gid=0'
       target='_blank'
@@ -27,11 +29,13 @@ const description = 'ตัวอย่างเทมเพลตเว็บ�
       Google Sheets โดย ThaiUI →
     </a>
   </p>
-  <div class='grid md:grid-cols-3 lg:grid-cols-4 gap-[30px] mb-[30px] before:hidden after:hidden'>
+  <div
+    class='grid md:grid-cols-3 lg:grid-cols-4 gap-[30px] mb-[30px] before:hidden after:hidden'
+  >
     {
       data.map((color) => (
         <div class='thaitone shadow:th-shadow-2 bg-th-bg-1 dark:bg-th-bg-1-dark flex items-center gap-4 rounded-th-rounded-2 overflow-hidden'>
-          <div style={`background: ${color.code}`} class="w-[60px] h-[60px]" />
+          <div style={`background: ${color.code}`} class='w-[60px] h-[60px]' />
           <span>
             <pre>{color.code}</pre>
             <strong>{color.name}</strong>

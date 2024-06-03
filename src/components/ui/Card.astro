@@ -1,0 +1,22 @@
+---
+import Image from '../../components/ui/Image.astro';
+const { title, thumbnail, link, date, category } = Astro.props;
+---
+
+<article>
+  <div class='relative pt-[52.5%] overflow-hidden'>
+    <a href={link} class='block'>
+      <Image
+        src={thumbnail}
+        classes='absolute left-0 top-0 w-full h-full object-cover'
+        alt={title}
+      />
+    </a>
+  </div>
+  <div class='flex flex-1 flex-col gap-2'>
+    <h3 class='mt-6 mb-0 text-xl font-normal'>
+      <a href={link} set:html={title} class='text-th-text-4' />
+    </h3>
+    <span class='text-sm text-th-text-6'>{date}</span>
+  </div>
+</article>

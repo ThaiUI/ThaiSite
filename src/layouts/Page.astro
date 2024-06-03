@@ -4,7 +4,11 @@ import '../styles/page.scss';
 const { frontmatter } = Astro.props;
 ---
 
-<Layout title={frontmatter.title} description={frontmatter.description} bodyclass='width-sm'>
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.description}
+  bodyclass='width-sm'
+>
   <article>
     <h1>{frontmatter.title}</h1>
     <slot />

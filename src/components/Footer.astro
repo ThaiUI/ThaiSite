@@ -1,7 +1,158 @@
 ---
 import { Icon } from 'astro-icon';
+const mainMenus = [
+  {
+    name: 'หน้าแรก',
+    link: '#',
+  },
+  {
+    name: 'เกี่ยวกับเรา',
+    link: '#',
+  },
+  {
+    name: 'เกี่ยวกับโครงการ',
+    link: '#',
+  },
+  {
+    name: 'ข่าวประชาสัมพันธ์',
+    link: '#',
+  },
+  {
+    name: 'บทความ',
+    link: '#',
+  },
+];
+const subMenus = [
+  {
+    name: 'คลังภาพกิจกรรม',
+    link: '#',
+  },
+  {
+    name: 'เอกสารเผยแพร่',
+    link: '#',
+  },
+  {
+    name: 'ติดต่อเรา',
+    link: '#',
+  },
+  {
+    name: 'แจ้งเรื่องร้องเรียน',
+    link: '#',
+  },
+  {
+    name: 'คำถามที่พบบ่อย',
+    link: '#',
+  },
+];
+const socialIcons = [
+  {
+    icon: 'facebook',
+    link: '#',
+  },
+  {
+    icon: 'twitter',
+    link: '#',
+  },
+  {
+    icon: 'line',
+    link: '#',
+  },
+  {
+    icon: 'instagram',
+    link: '#',
+  },
+  {
+    icon: 'youtube',
+    link: '#',
+  },
+];
 ---
 
-<footer id='foot' class='mt-auto p-4 md:p-5 bg-th-foot-bg dark:bg-th-foot-bg-dark text-th-foot-text text-xs text-center leading-[1.2rem]'>
-  <div class='w-full max-w-th-width-lg mx-auto px-4 md:px-5 items-center'>© 2024. <a href="https://thaiui.org/" class="text-th-foot-text hover:text-white hover:opacity-80">ThaiUI</a> All Rights Reserved.</div>
+<footer id='foot' class='mt-auto'>
+  <div class='bg-th-bg-5 text-white'>
+    <div
+      class='w-full flex justify-between max-w-th-width-lg mx-auto px-4 md:px-5 py-10 pb-4 md:pb-5 lg:pb-6 xl:pb-16'
+    >
+      <div>
+        <div class='flex items-center'>
+          <div
+            class='flex justify-center items-center bg-white rounded-full w-16 h-16 text-center'
+          >
+            <Icon
+              name='logo-light'
+              width='2em'
+              height='2em'
+              class='text-center'
+            />
+          </div>
+          <h2 class='mb-0 ml-5 font-normal text-3xl'>ไทยยูไอ</h2>
+        </div>
+        <p class='mb-0 pt-6 max-w-[430px]'>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elited do eiusmod
+          tempor incididunt ut labore et
+        </p>
+      </div>
+      <div>
+        {
+          mainMenus && (
+            <ul class='p-0 m-0'>
+              {mainMenus.map((i) => (
+                <li>
+                  <a
+                    href={i.link}
+                    class='text-white hover:text-white leading-7'
+                  >
+                    {i.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )
+        }
+      </div>
+      <div>
+        {
+          subMenus && (
+            <ul class='p-0 m-0'>
+              {subMenus.map((i) => (
+                <li>
+                  <a
+                    href={i.link}
+                    class='block text-white hover:text-white leading-7'
+                  >
+                    {i.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )
+        }
+      </div>
+      <div>
+        {
+          socialIcons && (
+            <ul class='p-0 m-0 mt-1 flex gap-3'>
+              {socialIcons.map((i) => (
+                <li>
+                  <a href={i.link} class='text-white'>
+                    <Icon name={i.icon} width='24px' height='24px' />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )
+        }
+      </div>
+    </div>
+  </div>
+  <div
+    class='mt-auto p-4 md:p-5 md:py-3 bg-th-foot-bg-2 dark:bg-th-foot-bg-2-dark text-th-foot-text text-xs text-center leading-[1.2rem]'
+  >
+    <div class='w-full max-w-th-width-lg mx-auto px-4 md:px-5 items-center'>
+      © 2024. <a
+        href='https://thaiui.org/'
+        class='text-th-foot-text hover:text-white hover:opacity-80'>ThaiUI</a
+      > All Rights Reserved.
+    </div>
+  </div>
 </footer>

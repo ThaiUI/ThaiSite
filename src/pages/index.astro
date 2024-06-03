@@ -1,20 +1,170 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Banner from '../components/Banner.astro';
+import Banner from '../components/sections/Banner.astro';
+import Title1 from '../components/sections/Title1.astro';
 import Features from '../components/sections/Features.astro';
+import Slogan from '../components/sections/Slogan.astro';
+import Posts from '../components/sections/Posts.astro';
+import Hero from '../components/sections/Hero.astro';
+import Title2 from '../components/sections/Title2.astro';
+import Logos from '../components/sections/Logos.astro';
 const metadata = {
   title: 'ไทยยูไอ',
   description: 'Starter Theme for Astro by Seed Webs',
-}
+};
 ---
 
-<Layout title={metadata.title} description={metadata.description}>
-  <Banner
-    src='../../assets/img/banner.jpg'
-  />
-  <Features
-    id='features'
+<Layout
+  title={metadata.title}
+  description={metadata.description}
+  bodyclass='bg-white dark:bg-th-bg-2-dark'
+>
+  <Banner src='/img/banner.jpg' />
+  <Title1
     title='Lorem ipsum dolor sit amet,'
     description='Lorem ipsum dolor sit amet, consectetur adipiscing elited do eiusmod tempor incididunt ut labore et dolore magna'
+  />
+  <Features
+    classes='grid-cols-3 mb-20'
+    items={[
+      {
+        icon: 'icon-1',
+        title: 'ต่อยอดจากงานวิจัยและพัฒนา',
+        description:
+          'นวัตกรรมเป็นหัวข้อหลักในการศึกษา ด้านเศรษฐศาสตร์ ธุรกิจ เทคโนโลยี สังคมศาสตร์ และวิศวกรรม',
+      },
+      {
+        icon: 'icon-2',
+        title: 'ได้รับการรับรองจากสถาบัน',
+        description:
+          'นวัตกรรมเป็นหัวข้อหลักในการศึกษา ด้านเศรษฐศาสตร์ ธุรกิจ เทคโนโลยี สังคมศาสตร์ และวิศวกรรม',
+      },
+      {
+        icon: 'icon-3',
+        title: 'คำนึงถึงสิ่งแวดล้อม',
+        description:
+          'นวัตกรรมเป็นหัวข้อหลักในการศึกษา ด้านเศรษฐศาสตร์ ธุรกิจ เทคโนโลยี สังคมศาสตร์ และวิศวกรรม',
+      },
+    ]}
+  />
+  <Slogan
+    title='สร้างสรรค์นวัตกรรมอย่างไม่หยุดยั้ง'
+    description='ด้วยวิสัยทัศน์พันธกิจบูรณาการนวัตกรรมเทคโนโลยีดิจิทัล'
+  />
+  <Posts
+    classes='grid-cols-3 gap-8 mb-20'
+    title='ข่าวประชาสัมพันธ์'
+    items={[
+      {
+        title: 'Lorem ipsum dolor sit amet, conse adipiscing',
+        thumbnail: '/img/thumbnail-1.jpg',
+        link: '/post/12345',
+        date: '2024-06-03T14:24:19',
+        categories: [
+          {
+            name: 'ข่าวประชาสัมพันธ์',
+            link: '/category/news',
+          },
+        ],
+      },
+      {
+        title: 'Lorem ipsum dolor sit amet, conse adipiscing',
+        thumbnail: '/img/thumbnail-2.jpg',
+        link: '/post/12345',
+        date: '2024-06-03T14:24:19',
+        categories: [
+          {
+            name: 'ข่าวประชาสัมพันธ์',
+            link: '/category/news',
+          },
+        ],
+      },
+      {
+        title: 'Lorem ipsum dolor sit amet, conse adipiscing',
+        thumbnail: '/img/thumbnail-3.jpg',
+        link: '/post/12345',
+        date: '2024-06-03T14:24:19',
+        categories: [
+          {
+            name: 'ข่าวประชาสัมพันธ์',
+            link: '/category/news',
+          },
+        ],
+      },
+    ]}
+  />
+  <Hero
+    title='Lorem ipsum dolor sit amet,'
+    description='Lorem ipsum dolor sit amet, consectetur adipiscing elited do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+  />
+  <Title2
+    title='นวัตกรรมต้นแบบ'
+    description='ตัวอย่างไอคอนเพื่อนำเสนอจุดเด่นองค์กร'
+  />
+  <Features
+    classes='grid-cols-4 mb-20'
+    items={[
+      {
+        icon: 'icon-1',
+        title: 'ต่อยอดจากงานวิจัยและพัฒนา',
+        description:
+          'นวัตกรรมเป็นหัวข้อหลักในการศึกษา ด้านเศรษฐศาสตร์ ธุรกิจ เทคโนโลยี สังคมศาสตร์ และวิศวกรรม',
+      },
+      {
+        icon: 'icon-2',
+        title: 'ได้รับการรับรองจากสถาบัน',
+        description:
+          'นวัตกรรมเป็นหัวข้อหลักในการศึกษา ด้านเศรษฐศาสตร์ ธุรกิจ เทคโนโลยี สังคมศาสตร์ และวิศวกรรม',
+      },
+      {
+        icon: 'icon-3',
+        title: 'คำนึงถึงสิ่งแวดล้อม',
+        description:
+          'นวัตกรรมเป็นหัวข้อหลักในการศึกษา ด้านเศรษฐศาสตร์ ธุรกิจ เทคโนโลยี สังคมศาสตร์ และวิศวกรรม',
+      },
+      {
+        icon: 'icon-4',
+        title: 'สำหรับผู้ใช้งานทุกระดับ',
+        description:
+          'นวัตกรรมเป็นหัวข้อหลักในการศึกษา ด้านเศรษฐศาสตร์ ธุรกิจ เทคโนโลยี สังคมศาสตร์ และวิศวกรรม',
+      },
+      {
+        icon: 'icon-5',
+        title: 'เสริมสร้างสมรรถนะ',
+        description:
+          'นวัตกรรมเป็นหัวข้อหลักในการศึกษา ด้านเศรษฐศาสตร์ ธุรกิจ เทคโนโลยี สังคมศาสตร์ และวิศวกรรม',
+      },
+      {
+        icon: 'icon-6',
+        title: 'ดีไซน์ในทุกรายละเอียด',
+        description:
+          'นวัตกรรมเป็นหัวข้อหลักในการศึกษา ด้านเศรษฐศาสตร์ ธุรกิจ เทคโนโลยี สังคมศาสตร์ และวิศวกรรม',
+      },
+      {
+        icon: 'icon-7',
+        title: 'อัตลักษณ์ทางชีวภาพ',
+        description:
+          'นวัตกรรมเป็นหัวข้อหลักในการศึกษา ด้านเศรษฐศาสตร์ ธุรกิจ เทคโนโลยี สังคมศาสตร์ และวิศวกรรม',
+      },
+      {
+        icon: 'icon-8',
+        title: 'พลวัตแห่งการเติบโต',
+        description:
+          'นวัตกรรมเป็นหัวข้อหลักในการศึกษา ด้านเศรษฐศาสตร์ ธุรกิจ เทคโนโลยี สังคมศาสตร์ และวิศวกรรม',
+      },
+    ]}
+  />
+  <Logos
+    classes='grid-cols-4 mb-0 py-8'
+    items={[
+      { icon: 'logo-1' },
+      { icon: 'logo-2' },
+      { icon: 'logo-3' },
+      { icon: 'logo-4' },
+      { icon: 'logo-5' },
+      { icon: 'logo-6' },
+      { icon: 'logo-7' },
+      { icon: 'logo-8' },
+    ]}
   />
 </Layout>
