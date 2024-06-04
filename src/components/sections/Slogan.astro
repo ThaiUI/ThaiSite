@@ -6,9 +6,15 @@ const { title, description } = Astro.props;
   class='mx-[calc(-50vw_+_50%)] mb-20 h-[340px] bg-slogan bg-cover flex items-center'
 >
   <div class='w-full max-w-th-width-lg mx-auto px-4 md:px-5'>
-    <h2 class='mb-3 text-3xl text-white font-normal dark:text-th-text-3-dark'>
+    <h2
+      class='mb-3 text-3xl text-center md:text-left text-white font-normal dark:text-th-text-3-dark'
+    >
       {title}
     </h2>
-    <p class='mb-0 text-white dark:text-th-text-4-dark'>{description}</p>
+    <p
+      class='mb-0 text-center md:text-left text-white dark:text-th-text-4-dark'
+    >
+      {description}
+    </p>
   </div>
 </section>

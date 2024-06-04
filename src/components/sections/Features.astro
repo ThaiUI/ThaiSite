@@ -10,10 +10,12 @@ const className = `grid gap-y-8 ${classes} pl-0 text-center`;
       {items.map((i) => (
         <div class='max-w-60 mx-auto'>
           <Icon name={i.icon} class='mx-auto w-auto h-[60px]' />
-          <h2 class='mt-6 mb-2 text-lg text-th-text-3 font-normal'>
+          <h2 class='mt-6 mb-2 text-lg text-th-text-3 dark:text-th-text-3-dark font-normal'>
             {i.title}
           </h2>
-          <p class='mb-0 text-sm text-th-text-5'>{i.description}</p>
+          <p class='mb-0 text-sm text-th-text-5 dark:text-th-text-5-dark dark:opacity-80'>
+            {i.description}
+          </p>
         </div>
       ))}
     </section>

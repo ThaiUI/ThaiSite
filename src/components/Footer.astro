@@ -69,11 +69,11 @@ const socialIcons = [
 ---
 
 <footer id='foot' class='mt-auto'>
-  <div class='bg-th-bg-5 text-white'>
+  <div class='bg-th-bg-5 dark:bg-th-bg-5-dark text-white'>
     <div
-      class='w-full flex justify-between max-w-th-width-lg mx-auto px-4 md:px-5 py-10 pb-4 md:pb-5 lg:pb-6 xl:pb-16'
+      class='w-full flex flex-row flex-wrap justify-between max-w-th-width-lg mx-auto px-4 md:px-5 py-10 pb-10 md:pb-5 lg:pb-6 xl:pb-16'
     >
-      <div>
+      <div class='basis-full lg:basis-[unset]'>
         <div class='flex items-center'>
           <div
             class='flex justify-center items-center bg-white rounded-full w-16 h-16 text-center'
@@ -92,7 +92,7 @@ const socialIcons = [
           tempor incididunt ut labore et
         </p>
       </div>
-      <div>
+      <div class='basis-2/4 lg:basis-[unset] pt-6 lg:pt-0'>
         {
           mainMenus && (
             <ul class='p-0 m-0'>
@@ -110,7 +110,7 @@ const socialIcons = [
           )
         }
       </div>
-      <div>
+      <div class='basis-2/4 lg:basis-[unset] pt-6 lg:pt-0'>
         {
           subMenus && (
             <ul class='p-0 m-0'>
@@ -128,7 +128,7 @@ const socialIcons = [
           )
         }
       </div>
-      <div>
+      <div class='basis-full lg:basis-[unset] pt-6 lg:pt-0'>
         {
           socialIcons && (
             <ul class='p-0 m-0 mt-1 flex gap-3'>
