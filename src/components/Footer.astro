@@ -134,7 +134,11 @@ const socialIcons = [
             <ul class='p-0 m-0 mt-1 flex gap-3'>
               {socialIcons.map((i) => (
                 <li>
-                  <a href={i.link} class='text-white'>
+                  <a
+                    href={i.link}
+                    class='text-white'
+                    aria-label={`Go to ${i.icon}`}
+                  >
                     <Icon name={i.icon} width='24px' height='24px' />
                   </a>
                 </li>

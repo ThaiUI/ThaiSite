@@ -25,7 +25,7 @@ export default {
 				'th-text-4-dark': '#fff',
 				'th-text-5': '#64717c',
 				'th-text-5-dark': '#fff',
-				'th-text-6': '#919ea6',
+				'th-text-6': '#757575',
 				'th-text-5-dark': '#fff',
 				'th-bg-1': '#fff',
 				'th-bg-1-dark': '#242426',
