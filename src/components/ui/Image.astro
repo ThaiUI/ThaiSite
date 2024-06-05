@@ -4,6 +4,7 @@ import { Picture } from 'astro:assets';
 
 let { src, alt, classes, loading } = Astro.props;
 
+let type = src.includes('http') ? 'remote' : 'local';
 let local = src ? `/public${src}` : `/public/img/placeholder.webp`;
 let remote = src ? src : `/public/img/placeholder.webp`;
 
@@ -21,10 +22,10 @@ const isValidPath = images[local] ? true : false;
 ---
 
 <Picture
-  src={src.includes('http')
+  src={type == 'remote'
     ? remote
     : (images[local]() as Promise<{ default: ImageMetadata }>)}
-  formats={['avif', 'webp']}
+  formats={type == 'remote' ? [] : ['avif', 'webp']}
   inferSize={true}
   class={classes}
   loading={loading ? loading : 'lazy'}
