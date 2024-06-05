@@ -4,5 +4,10 @@ const { src } = Astro.props;
 ---
 
 <section class='max-w-screen w-screen mx-[calc(-50vw_+_50%)]'>
-  <Image src={src} classes='w-screen h-[520px] object-cover' alt='ThaiUI' />
+  <Image
+    src={src}
+    classes='w-screen h-[520px] object-cover'
+    alt='ThaiUI'
+    loading='eager'
+  />
 </section>
