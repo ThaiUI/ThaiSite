@@ -1,8 +1,16 @@
-# ThaiOrg
-Web UI layout for organizations
+# ThaiSite
+Web UI layout for organizations.
 
-[pnpm](https://pnpm.io/) is recommended.
+## Demo
+
+• [ThaiSite](https://thaisite.thaiui.org)
+
+## Setup
 
 ```
-pnpm install
+npm install
 ```
+
+## Deploy
+
+Recommend [Cloudflare Pages](https://pages.cloudflare.com/) or [Netlify](https://www.netlify.com/) or [Vercel](https://vercel.com/).
