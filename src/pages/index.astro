@@ -8,6 +8,12 @@ import Posts from '../components/sections/Posts.astro';
 import Hero from '../components/sections/Hero.astro';
 import Title2 from '../components/sections/Title2.astro';
 import Logos from '../components/sections/Logos.astro';
+
+const res = await fetch(
+  'https://seedx.seeddemo.com/wp-json/wp/v2/posts?per_page=3&_embed'
+);
+const posts = await res.json();
+
 const metadata = {
   title: 'ไทยยูไอ',
   description: 'Starter Theme for Astro by Seed Webs',
@@ -54,44 +60,7 @@ const metadata = {
   <Posts
     classes='md:grid-cols-3 gap-8 mb-20'
     title='ข่าวประชาสัมพันธ์'
-    items={[
-      {
-        title: 'Lorem ipsum dolor sit amet, conse adipiscing',
-        thumbnail: '/img/thumbnail-1.jpg',
-        link: '/post/12345',
-        date: '2024-06-03T14:24:19',
-        categories: [
-          {
-            name: 'ข่าวประชาสัมพันธ์',
-            link: '/category/news',
-          },
-        ],
-      },
-      {
-        title: 'Lorem ipsum dolor sit amet, conse adipiscing',
-        thumbnail: '/img/thumbnail-2.jpg',
-        link: '/post/12345',
-        date: '2024-06-03T14:24:19',
-        categories: [
-          {
-            name: 'ข่าวประชาสัมพันธ์',
-            link: '/category/news',
-          },
-        ],
-      },
-      {
-        title: 'Lorem ipsum dolor sit amet, conse adipiscing',
-        thumbnail: '/img/thumbnail-3.jpg',
-        link: '/post/12345',
-        date: '2024-06-03T14:24:19',
-        categories: [
-          {
-            name: 'ข่าวประชาสัมพันธ์',
-            link: '/category/news',
-          },
-        ],
-      },
-    ]}
+    items={posts}
   />
   <Hero
     title='Lorem ipsum dolor sit amet,'

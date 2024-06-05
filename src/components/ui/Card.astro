@@ -1,5 +1,12 @@
 ---
 import Image from '../../components/ui/Image.astro';
+import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
+import buddhistEra from 'dayjs/plugin/buddhistEra';
+import 'dayjs/locale/th';
+dayjs.extend(utc);
+dayjs.extend(buddhistEra);
+dayjs.locale('th-th');
 const { title, thumbnail, link, date, category } = Astro.props;
 ---
 
@@ -21,6 +28,16 @@ const { title, thumbnail, link, date, category } = Astro.props;
         class='text-th-text-4 dark:text-th-text-4-dark'
       />
     </h3>
-    <span class='text-sm text-th-text-6'>{date}</span>
+    {
+      (category || date) && (
+        <span class='flex gap-2 text-sm text-th-text-6'>
+          {category && <span>{category.name}</span>}
+          {category && date && <span>•</span>}
+          {date && (
+            <span>{dayjs(date).locale('th').utc().format('DD MMM BB')}</span>
+          )}
+        </span>
+      )
+    }
   </div>
 </article>

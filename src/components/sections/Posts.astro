@@ -14,11 +14,15 @@ const className = `grid ${classes} pl-0`;
       <section class={className}>
         {items.map((i) => (
           <Card
-            title={i.title}
-            thumbnail={i.thumbnail}
-            link={i.link}
+            title={i.title.rendered}
+            thumbnail={
+              i._embedded['wp:featuredmedia'] &&
+              i._embedded['wp:featuredmedia'][0].media_details.sizes
+                .medium_large.source_url
+            }
+            link={`/${i.slug}`}
             date={i.date}
-            categories={i.categories}
+            category={i._embedded['wp:term'] && i._embedded['wp:term'][0][0]}
           />
         ))}
       </section>
