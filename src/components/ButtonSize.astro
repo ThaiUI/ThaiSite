@@ -18,39 +18,48 @@
   >
 </button>
 
-<script>
-  const size = (() => {
-    if (typeof localStorage !== 'undefined' && localStorage.getItem('size')) {
-      return localStorage.getItem('size');
-    }
-    return 's';
-  })();
-  const e = document.documentElement;
-  if (size === 'l') {
-    e.classList.add('size-l');
-  } else if (size === 'm') {
-    e.classList.remove('size-l');
-    e.classList.add('size-m');
-  } else {
-    e.classList.remove('size-l');
-    e.classList.remove('size-m');
-  }
-  window.localStorage.setItem('size', size);
-  const ToggleSize = () => {
-    const e = document.documentElement;
-    if (e.classList.contains('size-l')) {
-      localStorage.setItem('size', 's');
-      e.classList.remove('size-l');
-      e.classList.remove('size-m');
-    } else if (e.classList.contains('size-m')) {
-      localStorage.setItem('size', 'l');
-      e.classList.add('size-l');
-      e.classList.remove('size-m');
-    } else {
-      localStorage.setItem('size', 'm');
-      e.classList.add('size-m');
-      e.classList.remove('size-l');
-    }
-  };
-  document.querySelector('.th-size').addEventListener('click', ToggleSize);
+<script is:inline>
+  function init() {
+		const size = (() => {
+			if (typeof localStorage !== 'undefined' && localStorage.getItem('size')) {
+				return localStorage.getItem('size');
+			}
+			return 's';
+		})();
+
+		const e = document.documentElement;
+
+		if (size === 'l') {
+			e.classList.add('size-l');
+		} else if (size === 'm') {
+			e.classList.remove('size-l');
+			e.classList.add('size-m');
+		} else {
+			e.classList.remove('size-l');
+			e.classList.remove('size-m');
+		}
+
+		window.localStorage.setItem('size', size);
+
+		const ToggleSize = () => {
+			const e = document.documentElement;
+			if (e.classList.contains('size-l')) {
+				localStorage.setItem('size', 's');
+				e.classList.remove('size-l');
+				e.classList.remove('size-m');
+			} else if (e.classList.contains('size-m')) {
+				localStorage.setItem('size', 'l');
+				e.classList.add('size-l');
+				e.classList.remove('size-m');
+			} else {
+				localStorage.setItem('size', 'm');
+				e.classList.add('size-m');
+				e.classList.remove('size-l');
+			}
+		};
+    
+		document.querySelector('.th-size').addEventListener('click', ToggleSize);
+	}
+
+	document.addEventListener('astro:page-load', init);
 </script>
